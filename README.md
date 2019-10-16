@@ -108,7 +108,7 @@ A style dictionary is a collection of style properties, key/value pairs that des
 ```
 
 ### config.json
-This tells the style dictionary build system how and what to build. The default file path is config.json in the root of the project, but you can name it whatever you want, just pass in the `--config` flag.
+This tells the style dictionary build system on how and what to build. The default file path is config.json in the root of the project, but you can name it whatever you want, just pass in the `--config` flag.
 ```json
 {
   "source": ["properties/**/*.json"],
@@ -134,14 +134,14 @@ This tells the style dictionary build system how and what to build. The default 
 ```
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
-| source | Array | Paths to the property json files. Can have globs. |
+| source | Array | Paths to the property json files. It can have globs. |
 | platforms | Object | Sets of platform files to be built. |
-| platforms | Array | Paths to the property json files. Can have globs. |
+| platforms | Array | Paths to the property json files. It can have globs. |
 | platform.transformGroup | String (optional) | Apply a group of transforms to the properties, must either define this or `transforms`. |
 | platform.transforms | Array (optional) | Transforms to apply sequentially to all properties. Can be a built-in one or you can create your own. |
-| platform.buildPath | String (optional) | Base path to build the files, must end with a trailing slash. |
+| platform.buildPath | String (optional) | Base path to building the files, must end with a trailing slash. |
 | platform.files | Array (optional) | Files to be generated for this platform. |
-| platform.file.destination | String (optional) | Location to build the file, will be appended to the buildPath. |
+| platform.file.destination | String (optional) | Location to build the file, will be appended to the build path. |
 | platform.file.format | String (optional) | Format used to generate the file. Can be a built-in one or you can create your own. [More on formats](https://amzn.github.io/style-dictionary/#/formats) |
 | platform.file.options | Object (optional) | A set of extra options associated with the file. |
 | platform.file.options.showFileHeader | Boolean | If the generated file should have a "Do not edit + Timestamp" header (where the format supports it). By default is "true". |
@@ -195,7 +195,7 @@ $ cd MyStyleDictionary
 ```
 Now run:
 ```
-$ style-dictionary init basic
+$ style-dictionary init basically
 ```
 This command will copy over the example files found in [example](examples/) in this repo. Now you have an example project set up. You can make changes to the style dictionary and rebuild the project by running:
 
